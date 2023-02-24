@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Play", sans-serif;
+}
+
+.scrollbar::-webkit-scrollbar {
+	width: 2px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+	background: #242c56;
+	border-radius: 20px;
+}
+
+.simplebar-wrapper {
+	position: relative;
+	z-index: 5;
+}
+
+.simplebar-track {
+	border-radius: 14px;
+	z-index: 10;
+	position: relative;
+	margin-top: 20px;
+}
+.simplebar-track::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 1px;
+	bottom: 1px;
+	left: 0;
+	right: 0;
+	background: #2a2f41;
+}
+
+.simplebar-track.simplebar-horizontal {
+	height: 5px;
+}
+
+.simplebar-scrollbar::before {
+	background: #7750f8;
+	border-radius: 14px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.tariffs-simplebar .simplebar-content {
+	display: flex;
+	margin: 0 -15px;
+	align-items: center;
+}
+
+.tariffs-simplebar .simplebar-track {
+	bottom: 11px;
+	position: absolute;
+	margin-top: 0;
+	z-index: 1;
+}
+
+@media not all and (min-width: 640px) {
+	.tariffs-simplebar .simplebar-content {
+		margin: 0 -4px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
